@@ -1,0 +1,16 @@
+{
+  "name": "information_backend",
+  "version": "0.0.1",
+  "description": "information backend",
+  "repository": "https://github.com/Refugees-Say/information_backend.git",
+  "author": "Siim Tiilen <eritikass@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "swagger:validate": "swagger-tools validate swagger.yml",
+    "swagger:gen_docs": "spectacle -t api_docs swagger.yml -l ./logo.png"
+  },
+  "devDependencies": {
+    "spectacle-docs": "^0.9.12",
+    "swagger-tools": "^0.10.3"
+  }
+}

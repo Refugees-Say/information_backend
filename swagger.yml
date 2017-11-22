@@ -1,0 +1,47 @@
+swagger: '2.0'
+info:
+  title: information_backend
+  description: ""
+  version: 1.0.0
+# FIXME: use better hostname?
+host: api.local
+basePath: /v1
+schemes:
+  - http
+produces:
+  - application/json
+tags:
+  - name: settings
+    description: ' - ....'
+paths:
+  /test/test:
+    get:
+      summary: write me...
+      description: write me...
+      parameters: []
+      tags:
+        - settings
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+        default:
+          description: Invalid status value
+          schema:
+            $ref: '#/definitions/ApiResponse'
+
+definitions:
+  ApiResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+        example: 404
+      type:
+        type: string
+        example: "error"
+      message:
+        type: string
+        example: "Route no found"
