@@ -8,4 +8,14 @@ install:
   - yarn
 script:
   - yarn run swagger:validate
+after_success:
+  - yarn run swagger:gen_docs
 
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: "api_docs"
+  target_branch: "gh-pages"
+  on:
+    branch: master
